@@ -1,0 +1,25 @@
+\doxysection{keyboard.\+h}
+\hypertarget{keyboard_8h_source}{}\label{keyboard_8h_source}\index{/home/vasco/Vasco/facul/LCOM/shared/grupo\_2leic06\_4/proj/src/drivers/keyboard.h@{/home/vasco/Vasco/facul/LCOM/shared/grupo\_2leic06\_4/proj/src/drivers/keyboard.h}}
+\mbox{\hyperlink{keyboard_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ \_LCOM\_KEYBOARD\_H\_}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ \_LCOM\_KEYBOARD\_H\_}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <lcom/lcf.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}../helper/i8042.h"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{extern}\ uint8\_t\ scancode;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00021\ int\ (\mbox{\hyperlink{keyboard_8h_a178b1db0b319dccad2840cc3fd273132}{keyboard\_subscribe\_int}})(uint8\_t\ *bit\_no);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00028\ int\ (\mbox{\hyperlink{keyboard_8h_a32cc4de66854f8a7bd909e7aa8b901ed}{keyboard\_unsubscribe\_int}})();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00033\ void\ (\mbox{\hyperlink{keyboard_8h_aea970a154161a35f6894898a092ed70a}{kbc\_ih}})();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{keyboard_8h_acbb987f789f9b38280b8f83dd96bec66}{read\_controller}}(uint8\_t\ port,\ uint8\_t\ *output,\ uint8\_t\ mouse);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

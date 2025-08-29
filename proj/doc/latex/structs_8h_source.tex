@@ -1,0 +1,35 @@
+\doxysection{structs.\+h}
+\hypertarget{structs_8h_source}{}\label{structs_8h_source}\index{/home/vasco/Vasco/facul/LCOM/shared/grupo\_2leic06\_4/proj/src/helper/structs.h@{/home/vasco/Vasco/facul/LCOM/shared/grupo\_2leic06\_4/proj/src/helper/structs.h}}
+\mbox{\hyperlink{structs_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ \_PROJ\_STRUCTS\_}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ \_PROJ\_STRUCTS\_}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <lcom/lcf.h>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{enum}\ keys\ \{W,\ A,\ S,\ D,\ BW,\ BA,\ BS,\ BD\};}
+\DoxyCodeLine{00015\ \textcolor{keyword}{enum}\ direction\ \{UP,\ DOWN,\ LEFT,\ RIGHT,\ RDOWN,\ LDOWN,\ RUP,\ LUP,\ STOP\};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmouse__packet}{mouse\_packet}}\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ uint8\_t\ bytes[3];\ \textcolor{comment}{//\ 3\ bytes\ from\ mouse\ packet\ that\ are\ in\ the\ same\ order\ that\ they\ are\ given}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{bool}\ lb,\ rb,\ mb,\ x\_ovflow,\ y\_ovflow;\ \textcolor{comment}{//\ information\ obtained\ through\ the\ first\ byte}}
+\DoxyCodeLine{00024\ \ \ \ \ int16\_t\ x\_pos,\ y\_pos;\ \textcolor{comment}{//\ delta\ X\ and\ delta\ Y\ gotten\ from\ the\ second\ and\ third\ byte\ respectively\ (16\ bits\ are\ used\ because\ the\ positions\ are\ given\ with\ 9\ bits)}}
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00029\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structSprite}{Sprite}}\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ uint16\_t\ height,\ width;\ \textcolor{comment}{//\ heigth\ and\ width\ of\ the\ sprite}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ x\_pos;\ \textcolor{comment}{//\ position\ of\ the\ sprite\ in\ the\ X-\/axis}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ y\_pos;\ \textcolor{comment}{//\ position\ of\ the\ sprite\ in\ the\ Y-\/axis}}
+\DoxyCodeLine{00033\ \ \ \ \ uint32\_t\ *colors;\ \textcolor{comment}{//\ array\ that\ contains\ the\ colors\ of\ every\ pixel\ in\ the\ sprite\ (width\ x\ height)}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{int}\ speed;\ \textcolor{comment}{//\ if\ positive\ represents\ the\ number\ of\ pixels\ per\ frame\ the\ sprite\ will\ move,\ if\ negative\ represents\ the\ number\ of\ frames\ needed\ to\ go\ through\ one\ pixel\ }}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{enum}\ direction\ dir;\ \textcolor{comment}{//\ indicates\ in\ which\ direction\ the\ sprite\ is\ moving\ (default\ is\ STOP)\ }}
+\DoxyCodeLine{00036\ \};}
+\DoxyCodeLine{00040\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtrack__press}{track\_press}}\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{bool}\ w,\ a,\ s,\ d;\ \textcolor{comment}{//\ key\ from\ the\ keyboard,\ true\ if\ they\ are\ being\ pressed\ and\ false\ if\ they\ are\ not.}}
+\DoxyCodeLine{00042\ \};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_PROJ\_STRUCTS\_}}
+
+\end{DoxyCode}

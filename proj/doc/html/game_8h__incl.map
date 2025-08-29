@@ -1,0 +1,20 @@
+<map id="/home/vasco/Vasco/facul/LCOM/shared/grupo_2leic06_4/proj/src/states/game.h" name="/home/vasco/Vasco/facul/LCOM/shared/grupo_2leic06_4/proj/src/states/game.h">
+<area shape="rect" id="Node000001" title="Game state functions related to the drawing of the game, loading, keyboard processing and mouse relat..." alt="" coords="67,5,273,60"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="73,255,158,280"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="74,62,42,82,16,109,9,128,9,146,15,165,26,183,56,218,89,245,85,249,52,221,22,187,10,167,4,147,4,127,12,107,38,78,71,58"/>
+<area shape="rect" id="Node000003" href="$structs_8h.html" title="Data Structures that facilitates the logic of the project." alt="" coords="181,181,316,207"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="274,58,307,78,334,107,338,117,338,128,329,147,310,164,289,177,286,173,307,159,324,144,333,127,333,118,329,109,304,82,271,62"/>
+<area shape="rect" id="Node000006" href="$video_8h.html" title="Function declarations used for the video modes, pixels and sprites." alt="" coords="26,108,157,133"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="148,62,113,99,109,96,144,58"/>
+<area shape="rect" id="Node000007" href="$mouse_8h.html" title="Functions implemented to improve the use of the mouse driver." alt="" coords="181,108,319,133"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="197,58,232,96,228,99,193,62"/>
+<area shape="poly" id="edge5_Node000003_Node000002" title=" " alt="" coords="229,209,151,250,148,246,226,204"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="301,255,372,280"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="265,205,313,244,310,248,261,209"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="194,255,277,280"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="249,207,243,242,238,241,244,207"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="96,133,114,241,109,241,91,134"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="118,131,212,173,210,178,116,136"/>
+<area shape="poly" id="edge10_Node000007_Node000002" title=" " alt="" coords="232,136,202,156,171,183,147,214,129,244,125,241,143,211,167,180,198,152,229,131"/>
+<area shape="poly" id="edge11_Node000007_Node000003" title=" " alt="" coords="253,134,252,168,247,168,247,134"/>
+</map>

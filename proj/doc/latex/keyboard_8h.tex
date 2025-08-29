@@ -1,0 +1,96 @@
+\doxysection{/home/vasco/\+Vasco/facul/\+LCOM/shared/grupo\+\_\+2leic06\+\_\+4/proj/src/drivers/keyboard.h File Reference}
+\hypertarget{keyboard_8h}{}\label{keyboard_8h}\index{/home/vasco/Vasco/facul/LCOM/shared/grupo\_2leic06\_4/proj/src/drivers/keyboard.h@{/home/vasco/Vasco/facul/LCOM/shared/grupo\_2leic06\_4/proj/src/drivers/keyboard.h}}
+
+
+function declarations to configure the keyboard  
+
+
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include "{}../helper/i8042.\+h"{}}\newline
+Include dependency graph for keyboard.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{keyboard_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{keyboard_8h_a178b1db0b319dccad2840cc3fd273132}{keyboard\+\_\+subscribe\+\_\+int}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}bit\+\_\+no)
+\begin{DoxyCompactList}\small\item\em subscribes keyboard interrupts \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{keyboard_8h_a32cc4de66854f8a7bd909e7aa8b901ed}{keyboard\+\_\+unsubscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em unsubscribes keyboard interrupts \end{DoxyCompactList}\item 
+\Hypertarget{keyboard_8h_aea970a154161a35f6894898a092ed70a}\label{keyboard_8h_aea970a154161a35f6894898a092ed70a} 
+void() {\bfseries kbc\+\_\+ih} ()
+\begin{DoxyCompactList}\small\item\em handles keyboard interrupts \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{keyboard_8h_acbb987f789f9b38280b8f83dd96bec66}{read\+\_\+controller}} (uint8\+\_\+t port, uint8\+\_\+t \texorpdfstring{$\ast$}{*}output, uint8\+\_\+t mouse)
+\begin{DoxyCompactList}\small\item\em reads data from the controller \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{keyboard_8h_aa1de7a5557e9d96b83cf03f73c92163f}\label{keyboard_8h_aa1de7a5557e9d96b83cf03f73c92163f} 
+uint8\+\_\+t {\bfseries scancode}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+function declarations to configure the keyboard 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{keyboard_8h_a178b1db0b319dccad2840cc3fd273132}\label{keyboard_8h_a178b1db0b319dccad2840cc3fd273132} 
+\index{keyboard.h@{keyboard.h}!keyboard\_subscribe\_int@{keyboard\_subscribe\_int}}
+\index{keyboard\_subscribe\_int@{keyboard\_subscribe\_int}!keyboard.h@{keyboard.h}}
+\doxysubsubsection{\texorpdfstring{keyboard\_subscribe\_int()}{keyboard\_subscribe\_int()}}
+{\footnotesize\ttfamily int() keyboard\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{bit\+\_\+no }\end{DoxyParamCaption})}
+
+
+
+subscribes keyboard interrupts 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+\_\+no} & pointer to a variable storing the bit number\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, 1 on failure 
+\end{DoxyReturn}
+\Hypertarget{keyboard_8h_a32cc4de66854f8a7bd909e7aa8b901ed}\label{keyboard_8h_a32cc4de66854f8a7bd909e7aa8b901ed} 
+\index{keyboard.h@{keyboard.h}!keyboard\_unsubscribe\_int@{keyboard\_unsubscribe\_int}}
+\index{keyboard\_unsubscribe\_int@{keyboard\_unsubscribe\_int}!keyboard.h@{keyboard.h}}
+\doxysubsubsection{\texorpdfstring{keyboard\_unsubscribe\_int()}{keyboard\_unsubscribe\_int()}}
+{\footnotesize\ttfamily int() keyboard\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+unsubscribes keyboard interrupts 
+
+\begin{DoxyReturn}{Returns}
+0 on success, 1 on failure 
+\end{DoxyReturn}
+\Hypertarget{keyboard_8h_acbb987f789f9b38280b8f83dd96bec66}\label{keyboard_8h_acbb987f789f9b38280b8f83dd96bec66} 
+\index{keyboard.h@{keyboard.h}!read\_controller@{read\_controller}}
+\index{read\_controller@{read\_controller}!keyboard.h@{keyboard.h}}
+\doxysubsubsection{\texorpdfstring{read\_controller()}{read\_controller()}}
+{\footnotesize\ttfamily int read\+\_\+controller (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{output,  }\item[{uint8\+\_\+t}]{mouse }\end{DoxyParamCaption})}
+
+
+
+reads data from the controller 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & the port to read from \\
+\hline
+{\em output} & the data in the port \\
+\hline
+{\em mouse} & to tell if the data is from the mouse (1) or keyboard (0)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, 1 on failure 
+\end{DoxyReturn}

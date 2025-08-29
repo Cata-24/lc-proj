@@ -1,0 +1,12 @@
+<map id="/home/vasco/Vasco/facul/LCOM/shared/grupo_2leic06_4/proj/src/drivers/video.h" name="/home/vasco/Vasco/facul/LCOM/shared/grupo_2leic06_4/proj/src/drivers/video.h">
+<area shape="rect" id="Node000001" title="Function declarations used for the video modes, pixels and sprites." alt="" coords="5,5,212,60"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="15,181,101,207"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,61,85,109,67,169,62,167,79,107,96,59"/>
+<area shape="rect" id="Node000003" href="$structs_8h.html" title="Data Structures that facilitates the logic of the project." alt="" coords="95,108,229,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="127,59,150,95,145,98,123,61"/>
+<area shape="poly" id="edge5_Node000003_Node000002" title=" " alt="" coords="147,136,88,175,85,171,144,131"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="125,181,196,207"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="164,134,164,168,158,168,159,134"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="221,181,303,207"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="180,131,236,171,233,175,177,136"/>
+</map>

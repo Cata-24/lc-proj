@@ -1,0 +1,38 @@
+\doxysection{mouse.\+h}
+\hypertarget{mouse_8h_source}{}\label{mouse_8h_source}\index{/home/vasco/Vasco/facul/LCOM/shared/grupo\_2leic06\_4/proj/src/drivers/mouse.h@{/home/vasco/Vasco/facul/LCOM/shared/grupo\_2leic06\_4/proj/src/drivers/mouse.h}}
+\mbox{\hyperlink{mouse_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ \_PROJ\_MOUSE\_}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ \_PROJ\_MOUSE\_}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <lcom/lcf.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}../helper/structs.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ interrupt\ related}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{mouse_8h_aba401d4eb38d452921713a6c9e25532b}{mouse\_int\_sub}}(uint8\_t\ *irq\_mask);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00028\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{mouse_8h_a43970b9de84990047b6bddbced695861}{mouse\_int\_unsub}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{mouse_8h_a10ace591d083e1ea7e5d41ce293d69be}{mouse\_set\_reporting}}(\textcolor{keywordtype}{bool}\ value);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00047\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{mouse_8h_a3b3c835f8022879724e7923ed9d1cb4c}{mouse\_get\_packet}}(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structmouse__packet}{mouse\_packet}}\ *pack);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00057\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{mouse_8h_a1d823ab0fa5e35d56c931a29c09ba57e}{left\_mouse\_clicked}}(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structmouse__packet}{mouse\_packet}}\ *pack);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00066\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{mouse_8h_a3ceea0a9c32a7d08c53277024a927282}{right\_mouse\_clicked}}(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structmouse__packet}{mouse\_packet}}\ *pack);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00075\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{mouse_8h_a46817d27ef2bf035fe963493e956e740}{mid\_mouse\_clicked}}(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structmouse__packet}{mouse\_packet}}\ *pack);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00084\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{mouse_8h_a7fe5994fe75a0cc8d668a1197e96678b}{mouse\_hover}}(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structSprite}{Sprite}}\ *button);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00090\ void\ (\mbox{\hyperlink{mouse_8h_a210374b50462acdedab00df64d5cea3c}{mouse\_ih}})();}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_PROJ\_MOUSE\_}}
+
+\end{DoxyCode}

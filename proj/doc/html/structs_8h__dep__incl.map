@@ -1,0 +1,14 @@
+<map id="/home/vasco/Vasco/facul/LCOM/shared/grupo_2leic06_4/proj/src/helper/structs.h" name="/home/vasco/Vasco/facul/LCOM/shared/grupo_2leic06_4/proj/src/helper/structs.h">
+<area shape="rect" id="Node000001" title="Data Structures that facilitates the logic of the project." alt="" coords="217,5,424,60"/>
+<area shape="rect" id="Node000002" href="$mouse_8h.html" title="Functions implemented to improve the use of the mouse driver." alt="" coords="5,108,212,163"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="255,68,165,110,163,106,252,63"/>
+<area shape="rect" id="Node000003" href="$game_8h.html" title="Game state functions related to the drawing of the game, loading, keyboard processing and mouse relat..." alt="" coords="147,211,353,265"/>
+<area shape="poly" id="edge6_Node000001_Node000003" title=" " alt="" coords="297,73,278,109,263,162,255,211,250,210,257,161,273,107,292,70"/>
+<area shape="rect" id="Node000004" href="$video_8h.html" title="Function declarations used for the video modes, pixels and sprites." alt="" coords="288,108,495,163"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="349,70,375,106,371,109,345,73"/>
+<area shape="rect" id="Node000005" href="$menu_8h.html" title="Function declarations used for the game menu." alt="" coords="403,211,609,265"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="438,54,478,75,495,89,510,107,521,132,524,160,517,211,512,210,519,160,516,134,505,109,491,93,475,79,436,58"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="158,168,214,208,211,213,155,173"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="345,173,289,213,286,208,342,168"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="433,170,478,209,474,213,430,174"/>
+</map>

@@ -1,0 +1,97 @@
+\doxysection{/home/vasco/\+Vasco/facul/\+LCOM/shared/grupo\+\_\+2leic06\+\_\+4/proj/src/states/menu.h File Reference}
+\hypertarget{menu_8h}{}\label{menu_8h}\index{/home/vasco/Vasco/facul/LCOM/shared/grupo\_2leic06\_4/proj/src/states/menu.h@{/home/vasco/Vasco/facul/LCOM/shared/grupo\_2leic06\_4/proj/src/states/menu.h}}
+
+
+Function declarations used for the game menu.  
+
+
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include "{}../helper/structs.\+h"{}}\newline
+{\ttfamily \#include "{}../drivers/video.\+h"{}}\newline
+Include dependency graph for menu.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{menu_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{menu_8h_a7cacb2af5d8580f8097a4f99f47856da}{load\+\_\+menu\+\_\+state}} ()
+\begin{DoxyCompactList}\small\item\em Loads the sprites for the menu state. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{menu_8h_aa300a4e9ca3d4c087bf6d7e1a07dc3dd}{draw\+\_\+menu\+\_\+state}} ()
+\begin{DoxyCompactList}\small\item\em Draws the sprites that correspond to the current substate. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{menu_8h_a6787c6bc8e358a83d219301e290216b5}{kbd\+\_\+menu\+\_\+ih}} ()
+\begin{DoxyCompactList}\small\item\em Keyboard interrupt handler for the menu. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{menu_8h_a25bb4d9315293bded945d2898b4d4e41}{mouse\+\_\+menu\+\_\+ih}} ()
+\begin{DoxyCompactList}\small\item\em Mouse interrupt handler for the menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Function declarations used for the game menu. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{menu_8h_aa300a4e9ca3d4c087bf6d7e1a07dc3dd}\label{menu_8h_aa300a4e9ca3d4c087bf6d7e1a07dc3dd} 
+\index{menu.h@{menu.h}!draw\_menu\_state@{draw\_menu\_state}}
+\index{draw\_menu\_state@{draw\_menu\_state}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{draw\_menu\_state()}{draw\_menu\_state()}}
+{\footnotesize\ttfamily int() draw\+\_\+menu\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the sprites that correspond to the current substate. 
+
+Draws the mouse cursor and buttons (if the cursor is over the button, the sprite changes). In the game over state, waits before returning to the main menu.
+
+\begin{DoxyReturn}{Returns}
+int 0 on success. 
+\end{DoxyReturn}
+\Hypertarget{menu_8h_a6787c6bc8e358a83d219301e290216b5}\label{menu_8h_a6787c6bc8e358a83d219301e290216b5} 
+\index{menu.h@{menu.h}!kbd\_menu\_ih@{kbd\_menu\_ih}}
+\index{kbd\_menu\_ih@{kbd\_menu\_ih}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{kbd\_menu\_ih()}{kbd\_menu\_ih()}}
+{\footnotesize\ttfamily int() kbd\+\_\+menu\+\_\+ih (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Keyboard interrupt handler for the menu. 
+
+It is used in the code of other states, but unused for the menu.
+
+\begin{DoxyReturn}{Returns}
+int 0. 
+\end{DoxyReturn}
+\Hypertarget{menu_8h_a7cacb2af5d8580f8097a4f99f47856da}\label{menu_8h_a7cacb2af5d8580f8097a4f99f47856da} 
+\index{menu.h@{menu.h}!load\_menu\_state@{load\_menu\_state}}
+\index{load\_menu\_state@{load\_menu\_state}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{load\_menu\_state()}{load\_menu\_state()}}
+{\footnotesize\ttfamily int() load\+\_\+menu\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loads the sprites for the menu state. 
+
+Loads images corresponding to the current substate, e.\+g., main menu, pause and game over.
+
+\begin{DoxyReturn}{Returns}
+int 0 in case of success. 
+\end{DoxyReturn}
+\Hypertarget{menu_8h_a25bb4d9315293bded945d2898b4d4e41}\label{menu_8h_a25bb4d9315293bded945d2898b4d4e41} 
+\index{menu.h@{menu.h}!mouse\_menu\_ih@{mouse\_menu\_ih}}
+\index{mouse\_menu\_ih@{mouse\_menu\_ih}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_menu\_ih()}{mouse\_menu\_ih()}}
+{\footnotesize\ttfamily int() mouse\+\_\+menu\+\_\+ih (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Mouse interrupt handler for the menu. 
+
+Updates the cursor position and when the left mouse button is clicked over a button the state is changed
+
+\begin{DoxyReturn}{Returns}
+int 0. 
+\end{DoxyReturn}

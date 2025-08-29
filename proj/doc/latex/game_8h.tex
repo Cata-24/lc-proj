@@ -1,0 +1,252 @@
+\doxysection{/home/vasco/\+Vasco/facul/\+LCOM/shared/grupo\+\_\+2leic06\+\_\+4/proj/src/states/game.h File Reference}
+\hypertarget{game_8h}{}\label{game_8h}\index{/home/vasco/Vasco/facul/LCOM/shared/grupo\_2leic06\_4/proj/src/states/game.h@{/home/vasco/Vasco/facul/LCOM/shared/grupo\_2leic06\_4/proj/src/states/game.h}}
+
+
+Game state functions related to the drawing of the game, loading, keyboard processing and mouse related to this state.  
+
+
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include "{}../helper/structs.\+h"{}}\newline
+{\ttfamily \#include "{}../drivers/video.\+h"{}}\newline
+{\ttfamily \#include "{}../drivers/mouse.\+h"{}}\newline
+Include dependency graph for game.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{game_8h_accf1e3fe4872288e6f60aea590fedf6e}\label{game_8h_accf1e3fe4872288e6f60aea590fedf6e} 
+int() {\bfseries load\+\_\+game\+\_\+state} ()
+\begin{DoxyCompactList}\small\item\em Loads the sprites needed to initialize the game state and also sets their position for the beginning of a new game. \end{DoxyCompactList}\item 
+\Hypertarget{game_8h_a2e620b57d75cb593707afb53113a6d48}\label{game_8h_a2e620b57d75cb593707afb53113a6d48} 
+int() {\bfseries load\+\_\+game\+\_\+level} ()
+\begin{DoxyCompactList}\small\item\em Loads the sprites need for a specific level of the game and their respective position where needed. \end{DoxyCompactList}\item 
+\Hypertarget{game_8h_aebe45d170f7b8998001c61da709a6a77}\label{game_8h_aebe45d170f7b8998001c61da709a6a77} 
+int() {\bfseries draw\+\_\+game\+\_\+state} ()
+\begin{DoxyCompactList}\small\item\em Draws the sprites that were loaded according to the level and processes the timer logic for movement and animation. \end{DoxyCompactList}\item 
+\Hypertarget{game_8h_ab6ba3d658028db2382200c80a3ab1372}\label{game_8h_ab6ba3d658028db2382200c80a3ab1372} 
+int() {\bfseries kbd\+\_\+game\+\_\+ih} ()
+\begin{DoxyCompactList}\small\item\em Processes the keyboard logic of the game, key.\+presses, direction changes and speed. \end{DoxyCompactList}\item 
+\Hypertarget{game_8h_a6839bafbf7bb531c357f05133c9ce1e4}\label{game_8h_a6839bafbf7bb531c357f05133c9ce1e4} 
+int() {\bfseries mouse\+\_\+game\+\_\+ih} ()
+\begin{DoxyCompactList}\small\item\em Processes the mouse logic of the game, direction in wich the player is looking at, clicks interaction and knife logic. \end{DoxyCompactList}\item 
+\Hypertarget{game_8h_ae8537122cf701ab1c5767397797abec4}\label{game_8h_ae8537122cf701ab1c5767397797abec4} 
+void() {\bfseries check\+\_\+mouse\+\_\+pos} ()
+\begin{DoxyCompactList}\small\item\em Verifies the position of the mouse and generates an angle based on the player to get the direction to look at. \end{DoxyCompactList}\item 
+\Hypertarget{game_8h_ad013db4a84d94bae3967e74ed40eef3c}\label{game_8h_ad013db4a84d94bae3967e74ed40eef3c} 
+void() {\bfseries set\+\_\+mouse\+\_\+pos} ()
+\begin{DoxyCompactList}\small\item\em Processes the new mouse position based on the packet received by the general mouse\+\_\+ih. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8h_afb4b1eae560909cf049551a451d3651a}{move\+\_\+monster}} (struct \mbox{\hyperlink{structSprite}{Sprite}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}monster, struct \mbox{\hyperlink{structSprite}{Sprite}} \texorpdfstring{$\ast$}{*}up, struct \mbox{\hyperlink{structSprite}{Sprite}} \texorpdfstring{$\ast$}{*}down, struct \mbox{\hyperlink{structSprite}{Sprite}} \texorpdfstring{$\ast$}{*}right, struct \mbox{\hyperlink{structSprite}{Sprite}} \texorpdfstring{$\ast$}{*}ddown, struct \mbox{\hyperlink{structSprite}{Sprite}} \texorpdfstring{$\ast$}{*}dup, bool \texorpdfstring{$\ast$}{*}reverse)
+\begin{DoxyCompactList}\small\item\em Function that decides the direction that the monster will take If it\textquotesingle{}s close to the player, directs towards him. If not, chooses a random direction. \end{DoxyCompactList}\item 
+\Hypertarget{game_8h_ae4bbc520761463228c9eefbaf330501d}\label{game_8h_ae4bbc520761463228c9eefbaf330501d} 
+void {\bfseries update\+\_\+monsters} ()
+\begin{DoxyCompactList}\small\item\em Redirects to the move\+\_\+monster for each of the 4 monsters with their respective values. \end{DoxyCompactList}\item 
+\Hypertarget{game_8h_a12cac3382532a82a02011368a7d5fefb}\label{game_8h_a12cac3382532a82a02011368a7d5fefb} 
+void {\bfseries attack} ()
+\begin{DoxyCompactList}\small\item\em Processes the throwable knives depending on the direction that the player is facing. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{game_8h_a5ac7364a7401ce118cff6c0277d32cb7}{check\+\_\+col}} (struct \mbox{\hyperlink{structSprite}{Sprite}} \texorpdfstring{$\ast$}{*}element)
+\begin{DoxyCompactList}\small\item\em Function that verifies the colisions of the player with a specific sprite. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game_8h_a05a5ea74e8a57bcfb43d82929cf7baa6}{check\+\_\+player\+\_\+col}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Verifies if a certain position is valid for the player to move in. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game_8h_a5d658e1416238d89baafdd00a63928d9}{check\+\_\+knife\+\_\+col}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Verifies if a certain position is valid for the knife to move in. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game_8h_a0049568bad3fc7584fc5604c3d7075ee}{change\+\_\+pos}} (struct \mbox{\hyperlink{structSprite}{Sprite}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}moved, int pixs, int i)
+\begin{DoxyCompactList}\small\item\em Processes the movement logic according to a sprite speed. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game_8h_a46584abb861e9235a131994b3b5253e7}{move\+\_\+sprites}} ()
+\begin{DoxyCompactList}\small\item\em Processes the stamina and speed logic and also iterates the mov\+\_\+sprites array (contains the sprites that may be movable) and processes their movement regarding their speed atribute. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8h_a48143dad653bd84eafd029790f18693e}{process\+\_\+keys}} (enum keys key)
+\begin{DoxyCompactList}\small\item\em Receives a key between pressing WASD or releasing WASD and changes the players direction and speed in respect to the key inputs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8h_a968788c037546ba7fd9872adee3917b3}{change\+\_\+player}} (struct \mbox{\hyperlink{structSprite}{Sprite}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}new, bool new\+\_\+reversed)
+\begin{DoxyCompactList}\small\item\em Changes the player sprite to be shown (between the 8 options) \end{DoxyCompactList}\item 
+\Hypertarget{game_8h_a269519cbb49f8e25052437a3e93c1850}\label{game_8h_a269519cbb49f8e25052437a3e93c1850} 
+void {\bfseries change\+\_\+ninja} ()
+\begin{DoxyCompactList}\small\item\em Change between the normal player sprite set and the blue player (speed) sprite set. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{game_8h_a7dd8c2e8fe3b879cea47d331aa824b2b}{is\+\_\+near\+\_\+bomb}} (int i)
+\begin{DoxyCompactList}\small\item\em Checks if the player is near a bomb. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Game state functions related to the drawing of the game, loading, keyboard processing and mouse related to this state. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{game_8h_a968788c037546ba7fd9872adee3917b3}\label{game_8h_a968788c037546ba7fd9872adee3917b3} 
+\index{game.h@{game.h}!change\_player@{change\_player}}
+\index{change\_player@{change\_player}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{change\_player()}{change\_player()}}
+{\footnotesize\ttfamily void change\+\_\+player (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structSprite}{Sprite}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{new,  }\item[{bool}]{new\+\_\+reversed }\end{DoxyParamCaption})}
+
+
+
+Changes the player sprite to be shown (between the 8 options) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new} & sprite that will be shown as the player \\
+\hline
+{\em new\+\_\+reversed} & if the new sprite should be reversed \\
+\hline
+\end{DoxyParams}
+\Hypertarget{game_8h_a0049568bad3fc7584fc5604c3d7075ee}\label{game_8h_a0049568bad3fc7584fc5604c3d7075ee} 
+\index{game.h@{game.h}!change\_pos@{change\_pos}}
+\index{change\_pos@{change\_pos}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{change\_pos()}{change\_pos()}}
+{\footnotesize\ttfamily int change\+\_\+pos (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structSprite}{Sprite}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{moved,  }\item[{int}]{pixs,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Processes the movement logic according to a sprite speed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em moved} & Pointer to the sprite to be moved \\
+\hline
+{\em pixs} & number of pixels to be moved \\
+\hline
+{\em i} & position on the mov\+\_\+sprites\mbox{[}\mbox{]} array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int = 0 if the function executed as expected and 1 otherwise. 
+\end{DoxyReturn}
+\Hypertarget{game_8h_a5ac7364a7401ce118cff6c0277d32cb7}\label{game_8h_a5ac7364a7401ce118cff6c0277d32cb7} 
+\index{game.h@{game.h}!check\_col@{check\_col}}
+\index{check\_col@{check\_col}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{check\_col()}{check\_col()}}
+{\footnotesize\ttfamily bool check\+\_\+col (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structSprite}{Sprite}} \texorpdfstring{$\ast$}{*}}]{element }\end{DoxyParamCaption})}
+
+
+
+Function that verifies the colisions of the player with a specific sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & sprite to check the colision with the player \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the sprite colides with player 
+
+false if the sprite does not colide with the player 
+\end{DoxyReturn}
+\Hypertarget{game_8h_a5d658e1416238d89baafdd00a63928d9}\label{game_8h_a5d658e1416238d89baafdd00a63928d9} 
+\index{game.h@{game.h}!check\_knife\_col@{check\_knife\_col}}
+\index{check\_knife\_col@{check\_knife\_col}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{check\_knife\_col()}{check\_knife\_col()}}
+{\footnotesize\ttfamily int check\+\_\+knife\+\_\+col (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Verifies if a certain position is valid for the knife to move in. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & coordinate to be evaluated \\
+\hline
+{\em y} & coordinate to be evaluated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int = 0 if possible to move and 1 otherwise. 
+\end{DoxyReturn}
+\Hypertarget{game_8h_a05a5ea74e8a57bcfb43d82929cf7baa6}\label{game_8h_a05a5ea74e8a57bcfb43d82929cf7baa6} 
+\index{game.h@{game.h}!check\_player\_col@{check\_player\_col}}
+\index{check\_player\_col@{check\_player\_col}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{check\_player\_col()}{check\_player\_col()}}
+{\footnotesize\ttfamily int check\+\_\+player\+\_\+col (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Verifies if a certain position is valid for the player to move in. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & coordinate to be evaluated \\
+\hline
+{\em y} & coordinate to be evaluated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int = 0 if possible to move and 1 otherwise. 
+\end{DoxyReturn}
+\Hypertarget{game_8h_a7dd8c2e8fe3b879cea47d331aa824b2b}\label{game_8h_a7dd8c2e8fe3b879cea47d331aa824b2b} 
+\index{game.h@{game.h}!is\_near\_bomb@{is\_near\_bomb}}
+\index{is\_near\_bomb@{is\_near\_bomb}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{is\_near\_bomb()}{is\_near\_bomb()}}
+{\footnotesize\ttfamily bool is\+\_\+near\+\_\+bomb (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Checks if the player is near a bomb. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & is the position of the bomb in the bomb array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if he is near 
+
+false if he is not near 
+\end{DoxyReturn}
+\Hypertarget{game_8h_afb4b1eae560909cf049551a451d3651a}\label{game_8h_afb4b1eae560909cf049551a451d3651a} 
+\index{game.h@{game.h}!move\_monster@{move\_monster}}
+\index{move\_monster@{move\_monster}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{move\_monster()}{move\_monster()}}
+{\footnotesize\ttfamily void move\+\_\+monster (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structSprite}{Sprite}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{monster,  }\item[{struct \mbox{\hyperlink{structSprite}{Sprite}} \texorpdfstring{$\ast$}{*}}]{up,  }\item[{struct \mbox{\hyperlink{structSprite}{Sprite}} \texorpdfstring{$\ast$}{*}}]{down,  }\item[{struct \mbox{\hyperlink{structSprite}{Sprite}} \texorpdfstring{$\ast$}{*}}]{right,  }\item[{struct \mbox{\hyperlink{structSprite}{Sprite}} \texorpdfstring{$\ast$}{*}}]{ddown,  }\item[{struct \mbox{\hyperlink{structSprite}{Sprite}} \texorpdfstring{$\ast$}{*}}]{dup,  }\item[{bool \texorpdfstring{$\ast$}{*}}]{reverse }\end{DoxyParamCaption})}
+
+
+
+Function that decides the direction that the monster will take If it\textquotesingle{}s close to the player, directs towards him. If not, chooses a random direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em monster} & double pointer to the sprite pointer that stores the monster to be displayed \\
+\hline
+{\em up} & monster sprite facing up \\
+\hline
+{\em down} & monster sprite facing down \\
+\hline
+{\em right} & monster sprite facing right \\
+\hline
+{\em ddown} & monster sprite facing the diagonal down \\
+\hline
+{\em dup} & monster sprite facing the diagonal up \\
+\hline
+{\em reverse} & pointer to the reverse value of the monster \\
+\hline
+\end{DoxyParams}
+\Hypertarget{game_8h_a46584abb861e9235a131994b3b5253e7}\label{game_8h_a46584abb861e9235a131994b3b5253e7} 
+\index{game.h@{game.h}!move\_sprites@{move\_sprites}}
+\index{move\_sprites@{move\_sprites}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{move\_sprites()}{move\_sprites()}}
+{\footnotesize\ttfamily int move\+\_\+sprites (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Processes the stamina and speed logic and also iterates the mov\+\_\+sprites array (contains the sprites that may be movable) and processes their movement regarding their speed atribute. 
+
+\begin{DoxyReturn}{Returns}
+int = 0 if the function executed as expected and 1 otherwise. 
+\end{DoxyReturn}
+\Hypertarget{game_8h_a48143dad653bd84eafd029790f18693e}\label{game_8h_a48143dad653bd84eafd029790f18693e} 
+\index{game.h@{game.h}!process\_keys@{process\_keys}}
+\index{process\_keys@{process\_keys}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{process\_keys()}{process\_keys()}}
+{\footnotesize\ttfamily void process\+\_\+keys (\begin{DoxyParamCaption}\item[{enum keys}]{key }\end{DoxyParamCaption})}
+
+
+
+Receives a key between pressing WASD or releasing WASD and changes the players direction and speed in respect to the key inputs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & key to be processed \\
+\hline
+\end{DoxyParams}

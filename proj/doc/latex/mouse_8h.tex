@@ -1,0 +1,194 @@
+\doxysection{/home/vasco/\+Vasco/facul/\+LCOM/shared/grupo\+\_\+2leic06\+\_\+4/proj/src/drivers/mouse.h File Reference}
+\hypertarget{mouse_8h}{}\label{mouse_8h}\index{/home/vasco/Vasco/facul/LCOM/shared/grupo\_2leic06\_4/proj/src/drivers/mouse.h@{/home/vasco/Vasco/facul/LCOM/shared/grupo\_2leic06\_4/proj/src/drivers/mouse.h}}
+
+
+Functions implemented to improve the use of the mouse driver.  
+
+
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include "{}../helper/structs.\+h"{}}\newline
+Include dependency graph for mouse.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{mouse_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{mouse_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{mouse_8h_aba401d4eb38d452921713a6c9e25532b}{mouse\+\_\+int\+\_\+sub}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}irq\+\_\+mask)
+\begin{DoxyCompactList}\small\item\em subscribes mouse interrupts \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{mouse_8h_a43970b9de84990047b6bddbced695861}{mouse\+\_\+int\+\_\+unsub}} ()
+\begin{DoxyCompactList}\small\item\em unsubscribes mouse interrupts \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{mouse_8h_a10ace591d083e1ea7e5d41ce293d69be}{mouse\+\_\+set\+\_\+reporting}} (bool value)
+\begin{DoxyCompactList}\small\item\em enables or disables data reporting \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{mouse_8h_a3b3c835f8022879724e7923ed9d1cb4c}{mouse\+\_\+get\+\_\+packet}} (struct \mbox{\hyperlink{structmouse__packet}{mouse\+\_\+packet}} \texorpdfstring{$\ast$}{*}pack)
+\begin{DoxyCompactList}\small\item\em processes the mouse packet \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{mouse_8h_a1d823ab0fa5e35d56c931a29c09ba57e}{left\+\_\+mouse\+\_\+clicked}} (struct \mbox{\hyperlink{structmouse__packet}{mouse\+\_\+packet}} \texorpdfstring{$\ast$}{*}pack)
+\begin{DoxyCompactList}\small\item\em checks if the left mouse button was clicked \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{mouse_8h_a3ceea0a9c32a7d08c53277024a927282}{right\+\_\+mouse\+\_\+clicked}} (struct \mbox{\hyperlink{structmouse__packet}{mouse\+\_\+packet}} \texorpdfstring{$\ast$}{*}pack)
+\begin{DoxyCompactList}\small\item\em checks if the right mouse button was clicked \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{mouse_8h_a46817d27ef2bf035fe963493e956e740}{mid\+\_\+mouse\+\_\+clicked}} (struct \mbox{\hyperlink{structmouse__packet}{mouse\+\_\+packet}} \texorpdfstring{$\ast$}{*}pack)
+\begin{DoxyCompactList}\small\item\em checks if the middle mouse button was clicked \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{mouse_8h_a7fe5994fe75a0cc8d668a1197e96678b}{mouse\+\_\+hover}} (struct \mbox{\hyperlink{structSprite}{Sprite}} \texorpdfstring{$\ast$}{*}button)
+\begin{DoxyCompactList}\small\item\em checks if mouse is hovering a sprite \end{DoxyCompactList}\item 
+\Hypertarget{mouse_8h_a210374b50462acdedab00df64d5cea3c}\label{mouse_8h_a210374b50462acdedab00df64d5cea3c} 
+void() {\bfseries mouse\+\_\+ih} ()
+\begin{DoxyCompactList}\small\item\em handles mouse interrupts \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions implemented to improve the use of the mouse driver. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{mouse_8h_a1d823ab0fa5e35d56c931a29c09ba57e}\label{mouse_8h_a1d823ab0fa5e35d56c931a29c09ba57e} 
+\index{mouse.h@{mouse.h}!left\_mouse\_clicked@{left\_mouse\_clicked}}
+\index{left\_mouse\_clicked@{left\_mouse\_clicked}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{left\_mouse\_clicked()}{left\_mouse\_clicked()}}
+{\footnotesize\ttfamily bool left\+\_\+mouse\+\_\+clicked (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structmouse__packet}{mouse\+\_\+packet}} \texorpdfstring{$\ast$}{*}}]{pack }\end{DoxyParamCaption})}
+
+
+
+checks if the left mouse button was clicked 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pack} & pointer to the mouse packet\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if left mouse button was clicked, false if it wasn\textquotesingle{}t 
+\end{DoxyReturn}
+\Hypertarget{mouse_8h_a46817d27ef2bf035fe963493e956e740}\label{mouse_8h_a46817d27ef2bf035fe963493e956e740} 
+\index{mouse.h@{mouse.h}!mid\_mouse\_clicked@{mid\_mouse\_clicked}}
+\index{mid\_mouse\_clicked@{mid\_mouse\_clicked}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{mid\_mouse\_clicked()}{mid\_mouse\_clicked()}}
+{\footnotesize\ttfamily bool mid\+\_\+mouse\+\_\+clicked (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structmouse__packet}{mouse\+\_\+packet}} \texorpdfstring{$\ast$}{*}}]{pack }\end{DoxyParamCaption})}
+
+
+
+checks if the middle mouse button was clicked 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pack} & pointer to the mouse packet\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if middle mouse button was clicked and false if it wasn\textquotesingle{}t 
+\end{DoxyReturn}
+\Hypertarget{mouse_8h_a3b3c835f8022879724e7923ed9d1cb4c}\label{mouse_8h_a3b3c835f8022879724e7923ed9d1cb4c} 
+\index{mouse.h@{mouse.h}!mouse\_get\_packet@{mouse\_get\_packet}}
+\index{mouse\_get\_packet@{mouse\_get\_packet}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_get\_packet()}{mouse\_get\_packet()}}
+{\footnotesize\ttfamily int mouse\+\_\+get\+\_\+packet (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structmouse__packet}{mouse\+\_\+packet}} \texorpdfstring{$\ast$}{*}}]{pack }\end{DoxyParamCaption})}
+
+
+
+processes the mouse packet 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pack} & pointer to the mouse packet\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success 
+\end{DoxyReturn}
+\Hypertarget{mouse_8h_a7fe5994fe75a0cc8d668a1197e96678b}\label{mouse_8h_a7fe5994fe75a0cc8d668a1197e96678b} 
+\index{mouse.h@{mouse.h}!mouse\_hover@{mouse\_hover}}
+\index{mouse\_hover@{mouse\_hover}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_hover()}{mouse\_hover()}}
+{\footnotesize\ttfamily bool mouse\+\_\+hover (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structSprite}{Sprite}} \texorpdfstring{$\ast$}{*}}]{button }\end{DoxyParamCaption})}
+
+
+
+checks if mouse is hovering a sprite 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & pointer to a sprite\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the mouse is hovering the sprite and false if it isn\textquotesingle{}t 
+\end{DoxyReturn}
+\Hypertarget{mouse_8h_aba401d4eb38d452921713a6c9e25532b}\label{mouse_8h_aba401d4eb38d452921713a6c9e25532b} 
+\index{mouse.h@{mouse.h}!mouse\_int\_sub@{mouse\_int\_sub}}
+\index{mouse\_int\_sub@{mouse\_int\_sub}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_int\_sub()}{mouse\_int\_sub()}}
+{\footnotesize\ttfamily int mouse\+\_\+int\+\_\+sub (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{irq\+\_\+mask }\end{DoxyParamCaption})}
+
+
+
+subscribes mouse interrupts 
+
+
+\begin{DoxyParams}{Parameters}
+{\em irq\+\_\+mask} & pointer to a variable storing the bit number\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, 1 on failure 
+\end{DoxyReturn}
+\Hypertarget{mouse_8h_a43970b9de84990047b6bddbced695861}\label{mouse_8h_a43970b9de84990047b6bddbced695861} 
+\index{mouse.h@{mouse.h}!mouse\_int\_unsub@{mouse\_int\_unsub}}
+\index{mouse\_int\_unsub@{mouse\_int\_unsub}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_int\_unsub()}{mouse\_int\_unsub()}}
+{\footnotesize\ttfamily int mouse\+\_\+int\+\_\+unsub (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+unsubscribes mouse interrupts 
+
+\begin{DoxyReturn}{Returns}
+0 on success, 1 on failure 
+\end{DoxyReturn}
+\Hypertarget{mouse_8h_a10ace591d083e1ea7e5d41ce293d69be}\label{mouse_8h_a10ace591d083e1ea7e5d41ce293d69be} 
+\index{mouse.h@{mouse.h}!mouse\_set\_reporting@{mouse\_set\_reporting}}
+\index{mouse\_set\_reporting@{mouse\_set\_reporting}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_set\_reporting()}{mouse\_set\_reporting()}}
+{\footnotesize\ttfamily int mouse\+\_\+set\+\_\+reporting (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+enables or disables data reporting 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & tells whether to enable or not reporting\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, 1 on failure 
+\end{DoxyReturn}
+\Hypertarget{mouse_8h_a3ceea0a9c32a7d08c53277024a927282}\label{mouse_8h_a3ceea0a9c32a7d08c53277024a927282} 
+\index{mouse.h@{mouse.h}!right\_mouse\_clicked@{right\_mouse\_clicked}}
+\index{right\_mouse\_clicked@{right\_mouse\_clicked}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{right\_mouse\_clicked()}{right\_mouse\_clicked()}}
+{\footnotesize\ttfamily bool right\+\_\+mouse\+\_\+clicked (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structmouse__packet}{mouse\+\_\+packet}} \texorpdfstring{$\ast$}{*}}]{pack }\end{DoxyParamCaption})}
+
+
+
+checks if the right mouse button was clicked 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pack} & pointer to the mouse packet\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if right mouse button was clicked, false if it wasn\textquotesingle{}t 
+\end{DoxyReturn}

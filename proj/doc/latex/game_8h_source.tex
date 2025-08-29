@@ -1,0 +1,36 @@
+\doxysection{game.\+h}
+\hypertarget{game_8h_source}{}\label{game_8h_source}\index{/home/vasco/Vasco/facul/LCOM/shared/grupo\_2leic06\_4/proj/src/states/game.h@{/home/vasco/Vasco/facul/LCOM/shared/grupo\_2leic06\_4/proj/src/states/game.h}}
+\mbox{\hyperlink{game_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ \_GAME\_STATE\_}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ \_GAME\_STATE\_}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <lcom/lcf.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}../helper/structs.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}../drivers/video.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}../drivers/mouse.h"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00018\ int\ (\mbox{\hyperlink{game_8h_accf1e3fe4872288e6f60aea590fedf6e}{load\_game\_state}})();}
+\DoxyCodeLine{00022\ int\ (\mbox{\hyperlink{game_8h_a2e620b57d75cb593707afb53113a6d48}{load\_game\_level}})();}
+\DoxyCodeLine{00027\ int\ (\mbox{\hyperlink{game_8h_aebe45d170f7b8998001c61da709a6a77}{draw\_game\_state}})();}
+\DoxyCodeLine{00031\ int\ (\mbox{\hyperlink{game_8h_ab6ba3d658028db2382200c80a3ab1372}{kbd\_game\_ih}})();}
+\DoxyCodeLine{00035\ int\ (\mbox{\hyperlink{game_8h_a6839bafbf7bb531c357f05133c9ce1e4}{mouse\_game\_ih}})();\ \textcolor{comment}{//\ handle\ ao\ mouse\ e\ às\ consequências\ no\ jogo}}
+\DoxyCodeLine{00039\ void\ (\mbox{\hyperlink{game_8h_ae8537122cf701ab1c5767397797abec4}{check\_mouse\_pos}})();}
+\DoxyCodeLine{00043\ void\ (\mbox{\hyperlink{game_8h_ad013db4a84d94bae3967e74ed40eef3c}{set\_mouse\_pos}})();}
+\DoxyCodeLine{00056\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game_8h_afb4b1eae560909cf049551a451d3651a}{move\_monster}}(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structSprite}{Sprite}}\ **monster,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structSprite}{Sprite}}\ *up,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structSprite}{Sprite}}\ *down,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structSprite}{Sprite}}\ *right,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structSprite}{Sprite}}\ *ddown,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structSprite}{Sprite}}\ *dup,\ \textcolor{keywordtype}{bool}\ *reverse);}
+\DoxyCodeLine{00060\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game_8h_ae4bbc520761463228c9eefbaf330501d}{update\_monsters}}();}
+\DoxyCodeLine{00064\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game_8h_a12cac3382532a82a02011368a7d5fefb}{attack}}();}
+\DoxyCodeLine{00072\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{game_8h_a5ac7364a7401ce118cff6c0277d32cb7}{check\_col}}(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structSprite}{Sprite}}\ *element);}
+\DoxyCodeLine{00080\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{game_8h_a05a5ea74e8a57bcfb43d82929cf7baa6}{check\_player\_col}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00088\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{game_8h_a5d658e1416238d89baafdd00a63928d9}{check\_knife\_col}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00097\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{game_8h_a0049568bad3fc7584fc5604c3d7075ee}{change\_pos}}(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structSprite}{Sprite}}\ **moved,\ \textcolor{keywordtype}{int}\ pixs,\ \textcolor{keywordtype}{int}\ i);}
+\DoxyCodeLine{00103\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{game_8h_a46584abb861e9235a131994b3b5253e7}{move\_sprites}}();}
+\DoxyCodeLine{00109\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game_8h_a48143dad653bd84eafd029790f18693e}{process\_keys}}(\textcolor{keyword}{enum}\ keys\ key);}
+\DoxyCodeLine{00116\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game_8h_a968788c037546ba7fd9872adee3917b3}{change\_player}}(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structSprite}{Sprite}}\ **\textcolor{keyword}{new},\ \textcolor{keywordtype}{bool}\ new\_reversed);}
+\DoxyCodeLine{00121\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game_8h_a269519cbb49f8e25052437a3e93c1850}{change\_ninja}}();}
+\DoxyCodeLine{00129\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{game_8h_a7dd8c2e8fe3b879cea47d331aa824b2b}{is\_near\_bomb}}(\textcolor{keywordtype}{int}\ i);}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_GAME\_STATE\_}}
+
+\end{DoxyCode}

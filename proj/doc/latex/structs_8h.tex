@@ -1,0 +1,71 @@
+\doxysection{/home/vasco/\+Vasco/facul/\+LCOM/shared/grupo\+\_\+2leic06\+\_\+4/proj/src/helper/structs.h File Reference}
+\hypertarget{structs_8h}{}\label{structs_8h}\index{/home/vasco/Vasco/facul/LCOM/shared/grupo\_2leic06\_4/proj/src/helper/structs.h@{/home/vasco/Vasco/facul/LCOM/shared/grupo\_2leic06\_4/proj/src/helper/structs.h}}
+
+
+Data Structures that facilitates the logic of the project.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+Include dependency graph for structs.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{structs_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structs_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmouse__packet}{mouse\+\_\+packet}}
+\begin{DoxyCompactList}\small\item\em saves the information about the mouse state. Contains the 3 bytes that form the mouse packet and are used to obtain the rest of theinformation. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structSprite}{Sprite}}
+\begin{DoxyCompactList}\small\item\em Contains information about each sprite. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtrack__press}{track\+\_\+press}}
+\begin{DoxyCompactList}\small\item\em Verifies if the keys w, a, s and d are being pressed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structs_8h_a3121b5e20cccb8e49edcbd3e9ac77712}\label{structs_8h_a3121b5e20cccb8e49edcbd3e9ac77712} 
+enum {\bfseries keys} \{ \newline
+{\bfseries W}
+, {\bfseries A}
+, {\bfseries S}
+, {\bfseries D}
+, \newline
+{\bfseries BW}
+, {\bfseries BA}
+, {\bfseries BS}
+, {\bfseries BD}
+ \}
+\item 
+\Hypertarget{structs_8h_a99f26e6ee9fcd62f75203b5402df8098}\label{structs_8h_a99f26e6ee9fcd62f75203b5402df8098} 
+enum {\bfseries direction} \{ \newline
+{\bfseries UP}
+, {\bfseries DOWN}
+, {\bfseries LEFT}
+, {\bfseries RIGHT}
+, \newline
+{\bfseries RDOWN}
+, {\bfseries LDOWN}
+, {\bfseries RUP}
+, {\bfseries LUP}
+, \newline
+{\bfseries STOP}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Data Structures that facilitates the logic of the project. 
+

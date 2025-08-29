@@ -1,0 +1,206 @@
+\doxysection{/home/vasco/\+Vasco/facul/\+LCOM/shared/grupo\+\_\+2leic06\+\_\+4/proj/src/drivers/video.h File Reference}
+\hypertarget{video_8h}{}\label{video_8h}\index{/home/vasco/Vasco/facul/LCOM/shared/grupo\_2leic06\_4/proj/src/drivers/video.h@{/home/vasco/Vasco/facul/LCOM/shared/grupo\_2leic06\_4/proj/src/drivers/video.h}}
+
+
+Function declarations used for the video modes, pixels and sprites.  
+
+
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include "{}../helper/structs.\+h"{}}\newline
+Include dependency graph for video.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{video_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{video_8h_a446e5762928d2ca5a5438f68c10a8b0b}{set\+BIOSMode}} (uint16\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Sets the video mode. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{video_8h_aed8a4b7651d26137902d8906d7ea45f2}{set\+VBECommand}} (uint16\+\_\+t command, uint16\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Sets a VBE command. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{video_8h_a1e85c30b03b0a2bd2439d6635b27efef}{get\+\_\+map\+\_\+mem}} (uint16\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Maps the video memory into the process address space. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{video_8h_a308f4e00745d3c71f51b989e3311a102}{buffer\+\_\+flip}} ()
+\begin{DoxyCompactList}\small\item\em Copies the temporary buffer to VRAM. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{video_8h_a331a0dded1a52d0baeb38f0435c3d5b2}{clear\+\_\+temp\+\_\+buf}} ()
+\begin{DoxyCompactList}\small\item\em Clears the temporary buffer. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{video_8h_a08c498ffeb0a3962e3b7711b57397741}{vg\+\_\+draw\+\_\+pixel}} (uint16\+\_\+t x, uint16\+\_\+t y, uint32\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draws a pixel on the temporary buffer at coordinates x, y with the given color. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{video_8h_aebfe3b353a97b2d71ba6f293efefcad8}{draw\+Sprite}} (struct \mbox{\hyperlink{structSprite}{Sprite}} \texorpdfstring{$\ast$}{*}sprite, bool reversed)
+\begin{DoxyCompactList}\small\item\em Draws a sprite. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{video_8h_a519f612259efb5d235ad1a84f2b0fadc}{load\+Sprite}} (struct \mbox{\hyperlink{structSprite}{Sprite}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}container, xpm\+\_\+map\+\_\+t sprite)
+\begin{DoxyCompactList}\small\item\em Loads a sprite from an XPM map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Function declarations used for the video modes, pixels and sprites. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{video_8h_a308f4e00745d3c71f51b989e3311a102}\label{video_8h_a308f4e00745d3c71f51b989e3311a102} 
+\index{video.h@{video.h}!buffer\_flip@{buffer\_flip}}
+\index{buffer\_flip@{buffer\_flip}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{buffer\_flip()}{buffer\_flip()}}
+{\footnotesize\ttfamily int() buffer\+\_\+flip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Copies the temporary buffer to VRAM. 
+
+Implements double buffering to prevent visual artifacts.
+
+\begin{DoxyReturn}{Returns}
+int 0 on success, 1 on failure. 
+\end{DoxyReturn}
+\Hypertarget{video_8h_a331a0dded1a52d0baeb38f0435c3d5b2}\label{video_8h_a331a0dded1a52d0baeb38f0435c3d5b2} 
+\index{video.h@{video.h}!clear\_temp\_buf@{clear\_temp\_buf}}
+\index{clear\_temp\_buf@{clear\_temp\_buf}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{clear\_temp\_buf()}{clear\_temp\_buf()}}
+{\footnotesize\ttfamily int() clear\+\_\+temp\+\_\+buf (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clears the temporary buffer. 
+
+All pixels set to 0.
+
+\begin{DoxyReturn}{Returns}
+int 0 on success, 1 on failure. 
+\end{DoxyReturn}
+\Hypertarget{video_8h_aebfe3b353a97b2d71ba6f293efefcad8}\label{video_8h_aebfe3b353a97b2d71ba6f293efefcad8} 
+\index{video.h@{video.h}!drawSprite@{drawSprite}}
+\index{drawSprite@{drawSprite}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{drawSprite()}{drawSprite()}}
+{\footnotesize\ttfamily int() draw\+Sprite (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structSprite}{Sprite}} \texorpdfstring{$\ast$}{*}}]{sprite,  }\item[{bool}]{reversed }\end{DoxyParamCaption})}
+
+
+
+Draws a sprite. 
+
+Uses reverse to transform Sprites to their reversed direction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite} & Pointer to the sprite struct. \\
+\hline
+{\em reversed} & If true, draw sprite mirrored. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 on success, 1 on failure. 
+\end{DoxyReturn}
+\Hypertarget{video_8h_a1e85c30b03b0a2bd2439d6635b27efef}\label{video_8h_a1e85c30b03b0a2bd2439d6635b27efef} 
+\index{video.h@{video.h}!get\_map\_mem@{get\_map\_mem}}
+\index{get\_map\_mem@{get\_map\_mem}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{get\_map\_mem()}{get\_map\_mem()}}
+{\footnotesize\ttfamily int() get\+\_\+map\+\_\+mem (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+Maps the video memory into the process address space. 
+
+Uses a pointer and mode information to map VRAM. Allocates a temporary buffer for double buffering.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The video mode. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 on success, 1 on failure. 
+\end{DoxyReturn}
+\Hypertarget{video_8h_a519f612259efb5d235ad1a84f2b0fadc}\label{video_8h_a519f612259efb5d235ad1a84f2b0fadc} 
+\index{video.h@{video.h}!loadSprite@{loadSprite}}
+\index{loadSprite@{loadSprite}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{loadSprite()}{loadSprite()}}
+{\footnotesize\ttfamily int() load\+Sprite (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structSprite}{Sprite}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{container,  }\item[{xpm\+\_\+map\+\_\+t}]{sprite }\end{DoxyParamCaption})}
+
+
+
+Loads a sprite from an XPM map. 
+
+Allocates memory for the sprite and initializes it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em container} & Pointer to the sprite pointer that is going to be loaded. \\
+\hline
+{\em sprite} & The XPM map to load. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 on success, 1 on failure. 
+\end{DoxyReturn}
+\Hypertarget{video_8h_a446e5762928d2ca5a5438f68c10a8b0b}\label{video_8h_a446e5762928d2ca5a5438f68c10a8b0b} 
+\index{video.h@{video.h}!setBIOSMode@{setBIOSMode}}
+\index{setBIOSMode@{setBIOSMode}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{setBIOSMode()}{setBIOSMode()}}
+{\footnotesize\ttfamily int() set\+BIOSMode (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+Sets the video mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The desired VBE Mode. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 on success, 1 on failure. 
+\end{DoxyReturn}
+\Hypertarget{video_8h_aed8a4b7651d26137902d8906d7ea45f2}\label{video_8h_aed8a4b7651d26137902d8906d7ea45f2} 
+\index{video.h@{video.h}!setVBECommand@{setVBECommand}}
+\index{setVBECommand@{setVBECommand}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{setVBECommand()}{setVBECommand()}}
+{\footnotesize\ttfamily int() set\+VBECommand (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{command,  }\item[{uint16\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+Sets a VBE command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & The desired command to call. \\
+\hline
+{\em mode} & The video mode for the command. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 on success, 1 on failure. 
+\end{DoxyReturn}
+\Hypertarget{video_8h_a08c498ffeb0a3962e3b7711b57397741}\label{video_8h_a08c498ffeb0a3962e3b7711b57397741} 
+\index{video.h@{video.h}!vg\_draw\_pixel@{vg\_draw\_pixel}}
+\index{vg\_draw\_pixel@{vg\_draw\_pixel}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{vg\_draw\_pixel()}{vg\_draw\_pixel()}}
+{\footnotesize\ttfamily int() vg\+\_\+draw\+\_\+pixel (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Draws a pixel on the temporary buffer at coordinates x, y with the given color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate. \\
+\hline
+{\em y} & Y coordinate. \\
+\hline
+{\em color} & Color to paint the pixel. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 on success, 1 on failure. 
+\end{DoxyReturn}
