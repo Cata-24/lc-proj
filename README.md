@@ -17,8 +17,74 @@ Group members:
 4. &lt;Vasco&gt; &ltGonçalves&gt; (&lt;up202305513@up.pt&gt;)
 
 ## Features
+
 - **Game Start Menu**
-  <img src="video+gifs/game-start.gif"/>
+<p justify="center">
+  <img src="video+gifs/game_start.gif"/>
+</p>
+<p><i>Includes buttons to start a new game or exit the game.</i></p>
+
+<br>
+
+- **Ninja's Weapon**
+<p justify="center">
+  <img src="video+gifs/sword.gif"/>
+</p>
+<p><i>Allows the player to use the cursor to point to the enemies and by clicking on the right button it shots a blade to kill them.</i></p>
+
+<br>
+
+- **Lives System**
+<p justify="center">
+  <img src="video+gifs/lives.gif"/>
+</p>
+<p><i>The player starts with three lives and by being attack by an enemy or a bomb loses one of them, but they are able to regain their lives by catching the hearts scattered in the level.</i></p>
+
+<br>
+
+- **Bombs**
+<p justify="center">
+  <img src="video+gifs/bomb.gif"/>
+</p>
+<p><i>There are secret bombs scattered through the level that are activated by the ninja when they step on it and if the ninja stays there during the bomb's explosition they lose a life.</i></p>
+
+<br>
+
+- **Going to the next level**
+<p justify="center">
+  <img src="video+gifs/key.gif"/>
+</p>
+<p justify="center">
+  <img src="video+gifs/open_door.gif"/>
+</p>
+<p><i>To allow the player to go to the next level they need to catch all the starts that appear in game, and when the final star is catched, a key appears and only with this key can the player go to the door and by clicking on it with the left cursor button they can get to the next level.</i></p>
+
+<br>
+
+- **Speed Ability**
+<p justify="center">
+  <img src="video+gifs/special_walls.gif"/>
+</p>
+<p><i>By pressing the spacebar in the keyboard the player gains speed which is the only way that they can go through some special walls featured in the final level of the game</i></p>
+
+<br>
+
+- **Pause Menu**
+<p justify="center">
+  <img src="video+gifs/pause.gif"/>
+</p>
+<p><i>Includes buttons to resume or exit the game.</i></p>
+
+<br>
+
+- **Win Menu**
+<p justify="center">
+  <img src="video+gifs/win.gif"/>
+</p>
+<p><i>When the player finishes all the levels they get to the win menu where by pressing the right button in the cursor while standing over the chest they can start a new game or exit.</i></p>
+
+<br>
+
 
 
 ## References
